@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="salereportall" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f558d4c2-98b3-4380-8a23-a05242a9918f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     t_inv_det.`inv_no`,
+     t_inv_det.`S_No` ,
+     t_inv_det.`barcode`,
+     t_inv_det.`item_name`,
+     t_inv_det.`qty`,
+     t_inv_det.`mrp`,
+     t_inv_det.`price`,
+     t_inv_det.`disc` ,
+     t_inv_det.`disc_amt`,
+     t_inv_det.`gst`,
+     t_inv_det.`cess`,
+     t_inv_det.`amt`,
+     t_inv_det.`itemid`,
+     t_inv_det.`inv_hsn`,
+     t_inv_paymode.`pay_mod`,
+     t_inv_paymode.`pay_amt` ,
+     t_inv_paymode.`pay_cash` AS t_inv_paymode_pay_cash,
+     t_inv_paymode.`pay_ref` AS t_inv_paymode_pay_ref,
+     t_inv_paymode.`ccno` AS t_inv_paymode_ccno,
+     t_inv_paymode.`bnk` AS t_inv_paymode_bnk,
+     t_inv_paymode.`cqno` AS t_inv_paymode_cqno,
+     t_inv_paymode.`cqdt` AS t_inv_paymode_cqdt,
+     t_inv_paymode.`inv_no` AS t_inv_paymode_inv_no,
+     t_inv_hdr.`inv_no` AS t_inv_hdr_inv_no,
+     t_inv_hdr.`inv_dt` AS t_inv_hdr_inv_dt,
+     t_inv_hdr.`cust_id` AS t_inv_hdr_cust_id,
+     t_inv_hdr.`cust_nm` AS t_inv_hdr_cust_nm,
+     t_inv_hdr.`inv_tim` AS t_inv_hdr_inv_tim,
+     t_inv_hdr.`inv_sals` AS t_inv_hdr_inv_sals,
+     t_inv_hdr.`inv_salsnm` AS t_inv_hdr_inv_salsnm,
+     t_inv_hdr.`inv_cust_addr` AS t_inv_hdr_inv_cust_addr,
+     t_inv_hdr.`gross_amt` AS t_inv_hdr_gross_amt,
+     t_inv_hdr.`inv_disc` AS t_inv_hdr_inv_disc,
+     t_inv_hdr.`inv_disc_amt` AS t_inv_hdr_inv_disc_amt,
+     t_inv_hdr.`inv_net_amt` AS t_inv_hdr_inv_net_amt,
+     t_inv_hdr.`amt_pay` AS t_inv_hdr_amt_pay,
+     t_inv_hdr.`no_item` AS t_inv_hdr_no_item,
+     t_inv_hdr.`tot_qty` AS t_inv_hdr_tot_qty,
+     t_inv_hdr.`item_desc` AS t_inv_hdr_item_desc,
+     t_inv_hdr.`payment_mode`
+FROM
+      t_inv_det,
+      t_inv_paymode,
+       t_inv_hdr]]>
+	</queryString>
+	<field name="inv_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="S_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="barcode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="item_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mrp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disc" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disc_amt" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gst" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cess" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="amt" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="itemid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="inv_hsn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pay_mod" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pay_amt" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="t_inv_paymode_pay_cash" class="java.lang.String"/>
+	<field name="t_inv_paymode_pay_ref" class="java.lang.String"/>
+	<field name="t_inv_paymode_ccno" class="java.lang.String"/>
+	<field name="t_inv_paymode_bnk" class="java.lang.String"/>
+	<field name="t_inv_paymode_cqno" class="java.lang.String"/>
+	<field name="t_inv_paymode_cqdt" class="java.lang.String"/>
+	<field name="t_inv_paymode_inv_no" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_no" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_dt" class="java.lang.String"/>
+	<field name="t_inv_hdr_cust_id" class="java.lang.String"/>
+	<field name="t_inv_hdr_cust_nm" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_tim" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_sals" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_salsnm" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_cust_addr" class="java.lang.String"/>
+	<field name="t_inv_hdr_gross_amt" class="java.math.BigDecimal"/>
+	<field name="t_inv_hdr_inv_disc" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_disc_amt" class="java.lang.String"/>
+	<field name="t_inv_hdr_inv_net_amt" class="java.math.BigDecimal"/>
+	<field name="t_inv_hdr_amt_pay" class="java.lang.String"/>
+	<field name="t_inv_hdr_no_item" class="java.lang.Integer"/>
+	<field name="t_inv_hdr_tot_qty" class="java.lang.Integer"/>
+	<field name="t_inv_hdr_item_desc" class="java.lang.String"/>
+	<field name="payment_mode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="138" y="0" width="555" height="35" forecolor="#FF0000" uuid="cb53aa91-8751-437d-87f2-fc90ec718037"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Californian FB" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ABC MART]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="55" width="555" height="20" uuid="60ab0657-eee3-483d-9dc8-6152f8c0e5b3"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[                         GSTIN-09AUDPK1614K1ZO    FSSAI NO- 22720692000348]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="72" width="555" height="20" uuid="c8792514-2dfc-47c0-be15-9296041038ad"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[SHIPRA SUN CITY,Indirapuram,GZB]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="305" y="29" width="224" height="20" uuid="398845bf-b1a0-4513-89a0-5c194e3306bc"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ INVOICE WISE SALE REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="555" height="20" uuid="37943106-8f2d-4e22-b1e2-b0d1e2faed63"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[              PHONE:9911035120 ,PAYTM:9911035120,  WHATSAPP:9911035120]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="683" y="10" width="120" height="31" backcolor="#FF3333" uuid="fc29bff6-4fe3-4458-b1fb-95a338118cbd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUST NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="428" y="10" width="136" height="31" backcolor="#FF3333" uuid="7a24c560-cb15-45e0-8301-f6a3835e2c4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAYMENT DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="566" y="10" width="57" height="31" backcolor="#FF3333" uuid="1dffe87d-d1d3-4cb4-846e-7e6a2c861544"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CASHIER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="296" y="10" width="65" height="31" backcolor="#FF3333" uuid="714317a1-b8de-4b2a-8202-8a5d83b345a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISC AMT.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="230" y="10" width="65" height="31" backcolor="#FF3333" uuid="9e0f008c-074d-4036-a53f-5b4074e98292"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DISC. PER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="76" y="11" width="78" height="31" backcolor="#FF3333" uuid="6dff839f-6ff2-4db9-b12c-b51df326fe27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="156" y="10" width="73" height="31" backcolor="#FF3333" uuid="107b1119-f36f-44df-9cb7-2b5f1b17510e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL TIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="11" width="75" height="31" backcolor="#FF3333" uuid="c72e7091-074d-40ea-8973-232faa0b059d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BILL DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="624" y="10" width="57" height="31" backcolor="#FF3333" uuid="bc4898c0-2ca6-4ac9-8516-e92c13ed39bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUST ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="362" y="10" width="65" height="31" backcolor="#FF3333" uuid="3b0846f2-3c3f-47be-92d0-b7952f2676fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NET AMT.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="78" y="4" width="66" height="20" uuid="aa2d1e5d-6507-4504-a5a6-724f7c34c57f"/>
+				<textFieldExpression><![CDATA[$F{t_inv_hdr_inv_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="5" width="69" height="20" uuid="4e73a8b7-218f-41cb-a9ed-2e73c85b2f8c"/>
+				<textFieldExpression><![CDATA[$F{t_inv_hdr_inv_dt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="5" width="62" height="20" uuid="31a89e16-be6e-4171-9d5c-c4d93828719e"/>
+				<textFieldExpression><![CDATA[$F{t_inv_hdr_inv_tim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="5" width="68" height="20" uuid="dd4a5a20-1dea-4678-92e9-9cecf562fd06"/>
+				<textFieldExpression><![CDATA[$F{t_inv_hdr_inv_net_amt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="5" width="56" height="20" uuid="17581ca2-596f-4cad-a0a8-e7db0609f5bb"/>
+				<textFieldExpression><![CDATA[$F{pay_mod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="5" width="71" height="20" uuid="4dd2af10-5d21-460e-ba40-88acb32eb5d7"/>
+				<textFieldExpression><![CDATA[$F{pay_amt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="614" y="5" width="73" height="20" uuid="322f5b94-0b17-4f5b-9f31-df455b8bbeec"/>
+				<textFieldExpression><![CDATA[$F{t_inv_hdr_cust_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="693" y="5" width="100" height="20" uuid="7f3fff20-edd4-4070-8c3a-59676bfa7a88"/>
+				<textFieldExpression><![CDATA[$F{t_inv_hdr_cust_nm}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
